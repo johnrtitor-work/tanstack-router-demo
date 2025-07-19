@@ -8,70 +8,88 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from './routes/__root';
-import { Route as IndexRouteImport } from './routes/index';
-import { Route as DemoTanstackQueryRouteImport } from './routes/demo.tanstack-query';
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as CalculatorRouteImport } from './routes/calculator'
+import { Route as IndexRouteImport } from './routes/index'
+import { Route as DemoTanstackQueryRouteImport } from './routes/demo.tanstack-query'
 
+const CalculatorRoute = CalculatorRouteImport.update({
+  id: '/calculator',
+  path: '/calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const DemoTanstackQueryRoute = DemoTanstackQueryRouteImport.update({
   id: '/demo/tanstack-query',
   path: '/demo/tanstack-query',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute;
-  '/demo/tanstack-query': typeof DemoTanstackQueryRoute;
+  '/': typeof IndexRoute
+  '/calculator': typeof CalculatorRoute
+  '/demo/tanstack-query': typeof DemoTanstackQueryRoute
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute;
-  '/demo/tanstack-query': typeof DemoTanstackQueryRoute;
+  '/': typeof IndexRoute
+  '/calculator': typeof CalculatorRoute
+  '/demo/tanstack-query': typeof DemoTanstackQueryRoute
 }
 export interface FileRoutesById {
-  __root__: typeof rootRouteImport;
-  '/': typeof IndexRoute;
-  '/demo/tanstack-query': typeof DemoTanstackQueryRoute;
+  __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
+  '/calculator': typeof CalculatorRoute
+  '/demo/tanstack-query': typeof DemoTanstackQueryRoute
 }
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath;
-  fullPaths: '/' | '/demo/tanstack-query';
-  fileRoutesByTo: FileRoutesByTo;
-  to: '/' | '/demo/tanstack-query';
-  id: '__root__' | '/' | '/demo/tanstack-query';
-  fileRoutesById: FileRoutesById;
+  fileRoutesByFullPath: FileRoutesByFullPath
+  fullPaths: '/' | '/calculator' | '/demo/tanstack-query'
+  fileRoutesByTo: FileRoutesByTo
+  to: '/' | '/calculator' | '/demo/tanstack-query'
+  id: '__root__' | '/' | '/calculator' | '/demo/tanstack-query'
+  fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute;
-  DemoTanstackQueryRoute: typeof DemoTanstackQueryRoute;
+  IndexRoute: typeof IndexRoute
+  CalculatorRoute: typeof CalculatorRoute
+  DemoTanstackQueryRoute: typeof DemoTanstackQueryRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/calculator': {
+      id: '/calculator'
+      path: '/calculator'
+      fullPath: '/calculator'
+      preLoaderRoute: typeof CalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
-      id: '/';
-      path: '/';
-      fullPath: '/';
-      preLoaderRoute: typeof IndexRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/demo/tanstack-query': {
-      id: '/demo/tanstack-query';
-      path: '/demo/tanstack-query';
-      fullPath: '/demo/tanstack-query';
-      preLoaderRoute: typeof DemoTanstackQueryRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
+      id: '/demo/tanstack-query'
+      path: '/demo/tanstack-query'
+      fullPath: '/demo/tanstack-query'
+      preLoaderRoute: typeof DemoTanstackQueryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CalculatorRoute: CalculatorRoute,
   DemoTanstackQueryRoute: DemoTanstackQueryRoute,
-};
+}
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>();
+  ._addFileTypes<FileRouteTypes>()
