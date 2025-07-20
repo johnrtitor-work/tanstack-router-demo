@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as CalculatorRouteImport } from './routes/calculator'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PokemonNameRouteImport } from './routes/pokemon/$name'
 import { Route as DemoTanstackQueryRouteImport } from './routes/demo.tanstack-query'
 
 const CalculatorRoute = CalculatorRouteImport.update({
@@ -23,6 +24,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PokemonNameRoute = PokemonNameRouteImport.update({
+  id: '/pokemon/$name',
+  path: '/pokemon/$name',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DemoTanstackQueryRoute = DemoTanstackQueryRouteImport.update({
   id: '/demo/tanstack-query',
   path: '/demo/tanstack-query',
@@ -33,30 +39,39 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/calculator': typeof CalculatorRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
+  '/pokemon/$name': typeof PokemonNameRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/calculator': typeof CalculatorRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
+  '/pokemon/$name': typeof PokemonNameRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/calculator': typeof CalculatorRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
+  '/pokemon/$name': typeof PokemonNameRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/calculator' | '/demo/tanstack-query'
+  fullPaths: '/' | '/calculator' | '/demo/tanstack-query' | '/pokemon/$name'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/calculator' | '/demo/tanstack-query'
-  id: '__root__' | '/' | '/calculator' | '/demo/tanstack-query'
+  to: '/' | '/calculator' | '/demo/tanstack-query' | '/pokemon/$name'
+  id:
+    | '__root__'
+    | '/'
+    | '/calculator'
+    | '/demo/tanstack-query'
+    | '/pokemon/$name'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CalculatorRoute: typeof CalculatorRoute
   DemoTanstackQueryRoute: typeof DemoTanstackQueryRoute
+  PokemonNameRoute: typeof PokemonNameRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -75,6 +90,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pokemon/$name': {
+      id: '/pokemon/$name'
+      path: '/pokemon/$name'
+      fullPath: '/pokemon/$name'
+      preLoaderRoute: typeof PokemonNameRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/demo/tanstack-query': {
       id: '/demo/tanstack-query'
       path: '/demo/tanstack-query'
@@ -89,6 +111,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CalculatorRoute: CalculatorRoute,
   DemoTanstackQueryRoute: DemoTanstackQueryRoute,
+  PokemonNameRoute: PokemonNameRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
