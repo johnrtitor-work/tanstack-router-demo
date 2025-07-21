@@ -1,0 +1,212 @@
+{
+  "pikachu": {
+    "name": "Pikachu",
+    "type": "Electric",
+    "description": "Pikachu is an Electric-type Pokémon known for its yellow fur and lightning bolt-shaped tail.",
+    "evolution": "Raichu",
+    "abilities": ["Static", "Lightning Rod"]
+  },
+  "bulbasaur": {
+    "name": "Bulbasaur",
+    "type": "Grass/Poison",
+    "description": "Bulbasaur is a dual-type Pokémon that stores energy in the plant bulb on its back.",
+    "evolution": "Ivysaur",
+    "abilities": ["Overgrow", "Chlorophyll"]
+  },
+  "charmander": {
+    "name": "Charmander",
+    "type": "Fire",
+    "description": "Charmander has a flame on its tail and is known for its fiery personality.",
+    "evolution": "Charmeleon",
+    "abilities": ["Blaze", "Solar Power"]
+  },
+  "squirtle": {
+    "name": "Squirtle",
+    "type": "Water",
+    "description": "Squirtle is a turtle-like Pokémon that can spray water with high force.",
+    "evolution": "Wartortle",
+    "abilities": ["Torrent", "Rain Dish"]
+  },
+  "jigglypuff": {
+    "name": "Jigglypuff",
+    "type": "Normal/Fairy",
+    "description": "Jigglypuff sings lullabies that put enemies to sleep.",
+    "evolution": "Wigglytuff",
+    "abilities": ["Cute Charm", "Competitive"]
+  },
+  "meowth": {
+    "name": "Meowth",
+    "type": "Normal",
+    "description": "Meowth loves shiny things and can speak human language in the anime.",
+    "evolution": "Persian",
+    "abilities": ["Pickup", "Technician"]
+  },
+  "psyduck": {
+    "name": "Psyduck",
+    "type": "Water",
+    "description": "Psyduck suffers from chronic headaches that unleash mysterious powers.",
+    "evolution": "Golduck",
+    "abilities": ["Damp", "Cloud Nine"]
+  },
+  "machop": {
+    "name": "Machop",
+    "type": "Fighting",
+    "description": "Machop is strong and trains tirelessly to become a fighting master.",
+    "evolution": "Machoke",
+    "abilities": ["Guts", "No Guard"]
+  },
+  "geodude": {
+    "name": "Geodude",
+    "type": "Rock/Ground",
+    "description": "Geodude is often mistaken for a rock and has great physical defense.",
+    "evolution": "Graveler",
+    "abilities": ["Rock Head", "Sturdy"]
+  },
+  "eevee": {
+    "name": "Eevee",
+    "type": "Normal",
+    "description": "Eevee can evolve into many different types depending on environment and items.",
+    "evolution": "Multiple (Vaporeon, Jolteon, etc.)",
+    "abilities": ["Run Away", "Adaptability"]
+  },
+  "snorlax": {
+    "name": "Snorlax",
+    "type": "Normal",
+    "description": "Snorlax sleeps most of the time but is immensely powerful when awake.",
+    "evolution": "None",
+    "abilities": ["Immunity", "Thick Fat"]
+  },
+  "gengar": {
+    "name": "Gengar",
+    "type": "Ghost/Poison",
+    "description": "Gengar hides in shadows and is known for its mischievous behavior.",
+    "evolution": "None",
+    "abilities": ["Cursed Body"]
+  },
+  "alakazam": {
+    "name": "Alakazam",
+    "type": "Psychic",
+    "description": "Alakazam has a very high IQ and uses psychic powers for battle.",
+    "evolution": "None",
+    "abilities": ["Synchronize", "Inner Focus"]
+  },
+  "mewtwo": {
+    "name": "Mewtwo",
+    "type": "Psychic",
+    "description": "Mewtwo is a genetically engineered Pokémon with immense psychic power.",
+    "evolution": "None",
+    "abilities": ["Pressure", "Unnerve"]
+  },
+  "mew": {
+    "name": "Mew",
+    "type": "Psychic",
+    "description": "Mew is said to contain the DNA of every Pokémon, allowing it to learn any move.",
+    "evolution": "None",
+    "abilities": ["Synchronize"]
+  },
+  "dragonite": {
+    "name": "Dragonite",
+    "type": "Dragon/Flying",
+    "description": "Dragonite is a kind-hearted dragon that can fly faster than the speed of sound.",
+    "evolution": "None",
+    "abilities": ["Inner Focus", "Multiscale"]
+  },
+  "magikarp": {
+    "name": "Magikarp",
+    "type": "Water",
+    "description": "Magikarp is weak but evolves into the powerful Gyarados.",
+    "evolution": "Gyarados",
+    "abilities": ["Swift Swim"]
+  },
+  "gyarados": {
+    "name": "Gyarados",
+    "type": "Water/Flying",
+    "description": "Gyarados is known for its aggressive nature and immense power.",
+    "evolution": "None",
+    "abilities": ["Intimidate", "Moxie"]
+  },
+  "onix": {
+    "name": "Onix",
+    "type": "Rock/Ground",
+    "description": "Onix is a rock snake Pokémon with immense digging capabilities.",
+    "evolution": "Steelix",
+    "abilities": ["Rock Head", "Sturdy"]
+  },
+  "gastly": {
+    "name": "Gastly",
+    "type": "Ghost/Poison",
+    "description": "Gastly is a ghost made of gas that can pass through solid objects.",
+    "evolution": "Haunter",
+    "abilities": ["Levitate"]
+  },
+  "haunter": {
+    "name": "Haunter",
+    "type": "Ghost/Poison",
+    "description": "Haunter hides in shadows and can slip through walls to spook people.",
+    "evolution": "Gengar",
+    "abilities": ["Levitate"]
+  },
+  "abra": {
+    "name": "Abra",
+    "type": "Psychic",
+    "description": "Abra teleports away from danger and sleeps 18 hours a day.",
+    "evolution": "Kadabra",
+    "abilities": ["Synchronize", "Inner Focus"]
+  },
+  "rattata": {
+    "name": "Rattata",
+    "type": "Normal",
+    "description": "Rattata is a fast and nimble rodent Pokémon with sharp fangs.",
+    "evolution": "Raticate",
+    "abilities": ["Run Away", "Guts"]
+  },
+  "zubat": {
+    "name": "Zubat",
+    "type": "Poison/Flying",
+    "description": "Zubat uses echolocation to navigate dark caves.",
+    "evolution": "Golbat",
+    "abilities": ["Inner Focus", "Infiltrator"]
+  },
+  "oddish": {
+    "name": "Oddish",
+    "type": "Grass/Poison",
+    "description": "Oddish absorbs moonlight and buries itself in the soil.",
+    "evolution": "Gloom",
+    "abilities": ["Chlorophyll", "Run Away"]
+  },
+  "growlithe": {
+    "name": "Growlithe",
+    "type": "Fire",
+    "description": "Growlithe is a loyal fire-type Pokémon often used by police forces.",
+    "evolution": "Arcanine",
+    "abilities": ["Intimidate", "Flash Fire"]
+  },
+  "poliwag": {
+    "name": "Poliwag",
+    "type": "Water",
+    "description": "Poliwag has a swirl on its belly that shows its internal organs.",
+    "evolution": "Poliwhirl",
+    "abilities": ["Water Absorb", "Damp"]
+  },
+  "bellsprout": {
+    "name": "Bellsprout",
+    "type": "Grass/Poison",
+    "description": "Bellsprout uses its flexible body to ensnare prey.",
+    "evolution": "Weepinbell",
+    "abilities": ["Chlorophyll"]
+  },
+  "tentacool": {
+    "name": "Tentacool",
+    "type": "Water/Poison",
+    "description": "Tentacool floats in the sea and stings anything it touches.",
+    "evolution": "Tentacruel",
+    "abilities": ["Clear Body", "Liquid Ooze"]
+  },
+  "sandshrew": {
+    "name": "Sandshrew",
+    "type": "Ground",
+    "description": "Sandshrew curls up into a ball to protect itself from enemies.",
+    "evolution": "Sandslash",
+    "abilities": ["Sand Veil", "Sand Rush"]
+  }
+}
