@@ -2,6 +2,7 @@ import { createFileRoute } from '@tanstack/react-router';
 import { PokemonRecords } from '@/data';
 
 export const Route = createFileRoute('/pokemon/$name')({
+  // before the page/component is rendered get this data
   loader: async ({ params }) => {
     return PokemonRecords[params.name.toLowerCase()];
   },
